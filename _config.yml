@@ -64,7 +64,6 @@ linkedin:           kongsong
 gems:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-gist
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile,.sass-cache,.DS_Store,.idea]
