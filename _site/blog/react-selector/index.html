@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="http://localhost:4000/blog/react-selector/">
-  <link rel="alternate" type="application/rss+xml" title="水榭清松-Song Kong" href="http://localhost:4000/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Aarcana" href="http://localhost:4000/feed.xml">
   <script src="/assets/js/jquery-1.8.2.min.js" | prepend: site.baseurl }}"></script>
   <script src="/assets/js/jPages.js" | prepend: site.baseurl }}"></script>
   <script src="/assets/js/script.js" | prepend: site.baseurl }}"></script>
@@ -56,13 +56,13 @@
 	    <svg id="ice-bear" xmlns="http://www.w3.org/2000/svg"  version="1.1" width="100%" height="100%" viewBox="0 0 800 400">
 		
             <g id="welcom-text" style="text-shadow: 1px 1px #EFEFEF, 2px 2px #ccc">
-                <text x="50" y="130" fill="#ed5565" font-size="100">W</text>
-                <text x="160" y="180" fill="#f4b350" font-size="100">E</text>
-                <text x="230" y="140" fill="#f2db94" font-size="130">L</text>
+                <text x="50" y="130" fill="#ed5565" font-size="100">A</text>
+                <text x="160" y="180" fill="#f4b350" font-size="100">A</text>
+                <text x="230" y="140" fill="#f2db94" font-size="130">R</text>
                 <text x="310" y="160" fill="#62ddbd" font-size="100">C</text>
-                <text x="400" y="160" fill="#62B3E5" font-size="90">O</text>
-                <text x="480" y="160" fill="#ec87c0" font-size="120">M</text>
-                <text x="600" y="160" fill="#b3aeef" font-size="100">E</text>
+                <text x="400" y="160" fill="#62B3E5" font-size="90">A</text>
+                <text x="480" y="160" fill="#ec87c0" font-size="120">N</text>
+                <text x="600" y="160" fill="#b3aeef" font-size="100">A</text>
             </g>
             <g id="bear-head" fill="white">
                 <circle r="20" cx="385" cy="310"/>
@@ -155,13 +155,15 @@
             <span class="nx">id</span>
         <span class="p">}</span>
     <span class="p">},</span>
-	<span class="c1">// 菜单的展示与隐藏</span>
+	<span class="c1">// 菜单的展示与隐藏
+</span>
     <span class="na">displayMenu</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="na">type</span><span class="p">:</span> <span class="nx">type</span><span class="p">.</span><span class="nx">DISPLAY_MENU</span>
         <span class="p">}</span>
     <span class="p">},</span>
-	<span class="c1">// 转换按钮的状态</span>
+	<span class="c1">// 转换按钮的状态
+</span>
     <span class="na">toggleBtn</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="na">type</span><span class="p">:</span> <span class="nx">type</span><span class="p">.</span><span class="nx">TOGGLE_BTN</span>
@@ -191,9 +193,11 @@
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">menuList</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./data.js'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../Action/type.js'</span><span class="p">);</span>
 
-<span class="c1">// localStorage</span>
+<span class="c1">// localStorage
+</span>
 <span class="kd">var</span> <span class="nx">local</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="c1">// load data.js</span>
+    <span class="c1">// load data.js
+</span>
     <span class="na">initLocal</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span>  <span class="k">this</span><span class="p">;</span>
         <span class="nx">self</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'nextId'</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
@@ -388,11 +392,11 @@
         <span class="kd">var</span> <span class="nx">currentText</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">beginSelect</span><span class="p">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">btnText</span><span class="p">.</span><span class="nx">stop</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">btnText</span><span class="p">.</span><span class="nx">start</span><span class="p">;</span>
         <span class="k">return</span> <span class="p">(</span>
             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"canvas-wrapper"</span><span class="o">&gt;</span>
-                <span class="o">&lt;</span><span class="nx">canvas</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">"canvas"</span> <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">400</span><span class="p">}</span> <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">500</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+                <span class="o">&lt;</span><span class="nx">canvas</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">"canvas"</span> <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">400</span><span class="p">}</span> <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">500</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">
 </span>                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-wrapper"</span><span class="o">&gt;</span>
-                    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-primary"</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">currentText</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>                <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+                    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">}</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-primary"</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">currentText</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
+</span>                <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
+</span>            <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
 </span>        <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
@@ -431,7 +435,7 @@
 <span class="kd">var</span> <span class="nx">ListComponent</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
     <span class="na">render</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">(</span>
-            <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-item"</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">listText</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-delete"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">deleteHandler</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"icon-trash icon-large"</span><span class="o">&gt;&lt;</span><span class="sr">/i&gt;&lt;/</span><span class="nx">span</span><span class="o">&gt;&lt;</span><span class="sr">/li</span><span class="err">&gt;
+            <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-item"</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">listText</span><span class="p">}</span><span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-delete"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">deleteHandler</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"icon-trash icon-large"</span><span class="o">&gt;&lt;</span><span class="sr">/i&gt;&lt;/</span><span class="nx">span</span><span class="o">&gt;&lt;</span><span class="sr">/li&gt;</span><span class="err">
 </span>        <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
@@ -467,9 +471,9 @@
     <span class="na">render</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">(</span>
             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"input-wrapper"</span><span class="o">&gt;</span>
-                <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"input-add"</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-input"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleChange</span><span class="p">}</span><span class="sr">/</span><span class="err">&gt;
-</span>                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-add"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">addHandler</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Add</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+                <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nx">name</span><span class="o">=</span><span class="s2">"input-add"</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-input"</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleChange</span><span class="p">}</span><span class="sr">/&gt;</span><span class="err">
+</span>                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-add"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">addHandler</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Add</span><span class="o">&lt;</span><span class="sr">/button&gt;</span><span class="err">
+</span>            <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
 </span>        <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
@@ -503,17 +507,17 @@
         <span class="k">return</span> <span class="p">(</span>
             <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-wrapper"</span><span class="o">&gt;</span>
                 <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"btn-menu"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">clickHandler</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">icon</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="sr">/i&gt;&lt;/</span><span class="nx">div</span><span class="o">&gt;</span>
-                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-body"</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="o">/</span><span class="p">{</span><span class="na">display</span><span class="p">:</span> <span class="nx">menuDisplay</span><span class="p">}</span><span class="sr">/}</span><span class="err">&gt;
+                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-body"</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="o">/</span><span class="p">{</span><span class="na">display</span><span class="p">:</span> <span class="nx">menuDisplay</span><span class="p">}</span><span class="sr">/}&gt;</span><span class="err">
 </span>                    <span class="o">&lt;</span><span class="nx">InputComponent</span><span class="o">/&gt;</span>
                     <span class="o">&lt;</span><span class="nx">ul</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"menu-detail"</span><span class="o">&gt;</span>
                         <span class="p">{</span>
                             <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">menuList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">){</span>
-                                <span class="k">return</span> <span class="o">&lt;</span><span class="nx">ListComponent</span> <span class="nx">listText</span> <span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">}</span> <span class="nx">key</span> <span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="nx">id</span> <span class="o">=</span> <span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="sr">/&gt;</span><span class="err">;
+                                <span class="k">return</span> <span class="o">&lt;</span><span class="nx">ListComponent</span> <span class="nx">listText</span> <span class="o">=</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="p">}</span> <span class="nx">key</span> <span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="nx">id</span> <span class="o">=</span> <span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="sr">/&gt;;</span><span class="err">
 </span>                            <span class="p">})</span>
                         <span class="p">}</span>
-                    <span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
-</span>                <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+                    <span class="o">&lt;</span><span class="sr">/ul&gt;</span><span class="err">
+</span>                <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
+</span>            <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
 </span>        <span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
@@ -551,7 +555,8 @@
 <span class="kd">var</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./Reducer/reducer.js'</span><span class="p">);</span>
 
 
-<span class="c1">// Store</span>
+<span class="c1">// Store
+</span>
 <span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">MenuComponent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./Component/menu.js'</span><span class="p">);</span>
@@ -562,8 +567,8 @@
         <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
             <span class="o">&lt;</span><span class="nx">MenuComponent</span> <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">CanvasComponent</span> <span class="nx">className</span> <span class="o">=</span> <span class="s1">'canvas-wrapper'</span> <span class="nx">btnText</span> <span class="o">=</span> <span class="p">{</span><span class="o">/</span><span class="p">{</span><span class="na">start</span><span class="p">:</span> <span class="s1">'Start'</span><span class="p">,</span> <span class="na">stop</span><span class="p">:</span> <span class="s1">'Stop'</span><span class="p">}</span><span class="sr">/} initText = '吃什么</span><span class="se">?</span><span class="sr">' blankText = "菜单空空如也"/</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="sr">/Provider</span><span class="err">&gt;
+        <span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">
+</span>    <span class="o">&lt;</span><span class="sr">/Provider&gt;</span><span class="err">
 </span>    <span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'main-wrapper'</span><span class="p">));</span></code></pre></figure>
 
 <p>为了让所有组件都能获取到<code class="highlighter-rouge">store</code>，根组件必须包裹在<code class="highlighter-rouge">Provider</code>中，并将<code class="highlighter-rouge">store</code>作为参数传给<code class="highlighter-rouge">Provider</code>。</p>
@@ -652,7 +657,7 @@
   <div class="footer-content">
     <div class="social-wrapper text-center">
       <ul class="social-lists">
-        <li><a class="social-btn btn-white" href="mailto:hi@kongsong.me" target="_blank" rel="noopener noreferrer" title="Mail me"><i class="fa fa-fw fa-envelope"></i></a></li>
+        
         
         
         <li><a class="social-btn btn-white" href="http://facebook.com/kongsong" target="_blank" rel="noopener noreferrer" title="Follow me on Facebook"><i class="fa fa-fw fa-facebook"></i></a></li>
@@ -678,7 +683,7 @@
         
       </ul>
     </div>
-    <div class="copyright text-center">Copyright © 2016 Song Kong. Powered by Jekyll.</div>
+    <div class="copyright text-center">Copyright © 2017 Aarcana.</div>
   </div>
   <div id="top" class="btn-top" style="display:none">
     <a href=" #header "><i class="fa fa-paw" aria-hidden="true"></i></a>

@@ -1,8 +1,8 @@
 #Site
-title: 水榭清松-Song Kong
-description: This is Song' home.
+title: Aarcana
+description: Team Project
 logo: favicon.png
-url: kongsong.me
+url: https://github.com/aarcana/aarcana.github.io
 rss_url: /feed.xml
 
 # Jekyll
@@ -31,11 +31,11 @@ baidu_analytics: 5b31ffbbdc6cff18727f3adf75a03777    #from //hm.baidu.com/hm.js?
 # Author information:
 author:
   resume: /resume
-  name: Song Kong     #the name of Blog section
-  about_me: I'm Song Kong, a student from BUPT. This is my online home & blog, where I share thoughts about front-end development, my daily life and other insteresting topics. Feel free to contact me by email if you have any question.
+  name: Aarcana     #the name of Blog section
+  about_us: Aarcana is a team consisting of Computer Science students who are working with their full efforts to meet the set goals of uplifting the society. The team primarily focuses on the sustainable development through the use of technology.
  
 # Social Links
-email:               hi@kongsong.me
+#email:               username
 #google.plus:        username
 #twitter:            username
 facebook:            kongsong

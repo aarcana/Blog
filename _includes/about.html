@@ -1,15 +1,15 @@
 <section id="about">
     <div class="wrapper">
         <div class="text-center">
-            <h1 class="blue-title">About me</h1>
+            <h1 class="blue-title">About Us</h1>
 	    <div class="avatar"></div>
             <div class="content text-center">
-                {{ site.author.about_me }}
+                {{ site.author.about_us }}
             </div>
             <div style="margin: 10px 0">
-                <a class="btn-primary btn-blue" href="mailto:{{ site.email }}" target="_blank">Email me</a>
+                <a class="btn-primary btn-blue" href="mailto:{{ site.email }}" target="_blank">Email Us</a>
 				{% if site.author.resume %}
-				<a class="btn-primary btn-blue" href="{{ site.author.resume }}" target="_blank">Resume</a>
+				<!-- <a class="btn-primary btn-blue" href="{{ site.author.resume }}" target="_blank">Resume</a> -->
 				{% endif %}
             </div>
         </div>
